@@ -1,0 +1,47 @@
+{
+  "common": {
+    "search": "खोजें",
+    "cart": "कार्ट",
+    "login": "लॉग इन",
+    "signup": "साइन अप",
+    "logout": "लॉग आउट",
+    "profile": "प्रोफ़ाइल",
+    "orders": "ऑर्डर",
+    "settings": "सेटिंग्स"
+  },
+  "product": {
+    "addToCart": "कार्ट में जोड़ें",
+    "outOfStock": "स्टॉक में नहीं है",
+    "quantity": "मात्रा",
+    "price": "कीमत",
+    "description": "विवरण",
+    "category": "श्रेणी",
+    "reviews": "समीक्षाएं"
+  },
+  "cart": {
+    "empty": "आपका कार्ट खाली है",
+    "total": "कुल",
+    "checkout": "चेकआउट",
+    "remove": "हटाएं",
+    "continue": "खरीदारी जारी रखें"
+  },
+  "checkout": {
+    "address": "डिलीवरी का पता",
+    "payment": "भुगतान विधि",
+    "summary": "ऑर्डर सारांश",
+    "confirm": "ऑर्डर की पुष्टि करें"
+  },
+  "account": {
+    "details": "खाता विवरण",
+    "orders": "मेरे ऑर्डर",
+    "wishlist": "विशलिस्ट",
+    "addresses": "सहेजे गए पते",
+    "payments": "भुगतान विधियां"
+  },
+  "errors": {
+    "required": "यह फ़ील्ड आवश्यक है",
+    "invalid": "अमान्य इनपुट",
+    "network": "नेटवर्क त्रुटि",
+    "unauthorized": "जारी रखने के लिए कृपया लॉगिन करें"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "short_name": "Neena Market",
+  "name": "Neena Super-Market E-commerce Platform",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#4CAF50",
+  "background_color": "#ffffff",
+  "description": "Your one-stop shop for groceries and household items",
+  "dir": "ltr",
+  "lang": "en-US",
+  "categories": ["shopping", "food", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "screenshots/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Home Screen of Neena Super-Market"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Cart",
+      "url": "/cart",
+      "icons": [{ "src": "icons/cart.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "My Orders",
+      "url": "/orders",
+      "icons": [{ "src": "icons/orders.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

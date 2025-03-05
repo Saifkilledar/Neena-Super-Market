@@ -2,8 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const helmet = require('helmet');
+const compression = require('compression');
+const path = require('path');
 const http = require('http');
 const socketIo = require('socket.io');
+const { setCacheControl, CACHE_DURATIONS } = require('./middleware/cache');
+const { cacheMiddleware } = require('./utils/cache');
 
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/products');
@@ -25,6 +30,11 @@ const io = socketIo(server, {
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(helmet());
+app.use(compression());
+
+// Static files caching
+app.use('/static', setCacheControl(CACHE_DURATIONS.STATIC), express.static(path.join(__dirname, 'public')));
 
 // Socket.IO connection handling
 io.on('connection', (socket) => {
@@ -39,9 +49,9 @@ io.on('connection', (socket) => {
   });
 });
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/products', productRoutes);
+// Routes with caching
+app.use('/api/auth', setCacheControl(CACHE_DURATIONS.AUTH), authRoutes);
+app.use('/api/products', setCacheControl(CACHE_DURATIONS.PRODUCTS), productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/users', userRoutes);

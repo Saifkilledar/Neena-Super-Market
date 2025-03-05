@@ -16,14 +16,14 @@ import {
 import {
   ShoppingCart,
   Person,
-  Search,
+  Search as SearchIcon,
   Menu as MenuIcon,
 } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../redux/slices/authSlice';
 
-const Search = styled('div')(({ theme }) => ({
+const SearchWrapper = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -117,15 +117,15 @@ const Navbar = () => {
             Neena Super-Market
           </Typography>
 
-          <Search sx={{ display: { xs: 'none', sm: 'flex' } }}>
+          <SearchWrapper sx={{ display: { xs: 'none', sm: 'flex' } }}>
             <SearchIconWrapper>
-              <Search />
+              <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search products..."
               inputProps={{ 'aria-label': 'search' }}
             />
-          </Search>
+          </SearchWrapper>
 
           <Box sx={{ flexGrow: 1 }} />
 
